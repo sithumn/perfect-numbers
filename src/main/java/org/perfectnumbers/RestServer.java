@@ -6,9 +6,9 @@ import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.jaxrs.lifecycle.SingletonResourceProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.perfectnumbers.resource.PerfectNumberResourceImpl;
 import org.perfectnumbers.interceptors.CheckPerfectNumberValidationFilter;
 import org.perfectnumbers.interceptors.GetPerfectNumberListValidationFilter;
+import org.perfectnumbers.resource.PerfectNumberResourceImpl;
 
 import java.util.Arrays;
 
@@ -21,6 +21,7 @@ public class RestServer {
     public RestServer initializeServer(final Config config) {
         logger.info("Initializing server");
         factoryBean = new JAXRSServerFactoryBean();
+        factoryBean.setResourceClasses(PerfectNumberResourceImpl.class);
         factoryBean.setResourceProvider(new SingletonResourceProvider(new PerfectNumberResourceImpl()));
 
         factoryBean.setProviders(

@@ -5,6 +5,9 @@ public class PerfectNumberStatus {
     private long number;
     private boolean valid;
 
+    public PerfectNumberStatus() {
+    }
+
     public PerfectNumberStatus(long number, boolean valid) {
         this.number = number;
         this.valid = valid;
