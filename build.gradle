@@ -1,4 +1,4 @@
-group 'org.logtrace'
+group 'org.perfectnumbers'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
