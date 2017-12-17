@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 @RunWith(Enclosed.class)
-public class GetPerfectNumbersTest {
+public class GetPerfectNumbersTestUtil {
 
     @RunWith(Parameterized.class)
     public static class WithValidParams {
@@ -50,7 +50,7 @@ public class GetPerfectNumbersTest {
 
         @Test
         public void testGetPerfectNumbersBetween() throws NumberRangeException {
-            List<Long> actual = PerfectNumber.getPerfectNumbersBetween(fStart, fEnd);
+            List<Long> actual = PerfectNumbers.getPerfectNumbersBetween(fStart, fEnd);
             assertEquals(fSize, actual.size());
             assertThat(actual, CoreMatchers.hasItem(fContains));
         }
@@ -84,7 +84,7 @@ public class GetPerfectNumbersTest {
             thrown.expect(NumberRangeException.class);
             thrown.expectMessage(startsWith("Invalid number range "));
 
-            PerfectNumber.getPerfectNumbersBetween(fStart, fEnd);
+            PerfectNumbers.getPerfectNumbersBetween(fStart, fEnd);
         }
     }
 }

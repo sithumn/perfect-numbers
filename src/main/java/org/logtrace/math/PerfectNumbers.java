@@ -6,7 +6,7 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PerfectNumber {
+public class PerfectNumbers {
 
     /**
      * Checks if a given number is a perfect number

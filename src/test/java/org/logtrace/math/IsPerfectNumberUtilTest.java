@@ -10,12 +10,12 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class IsPerfectNumberTest {
+public class IsPerfectNumberUtilTest {
 
     private long fNumber;
     private boolean fExpected;
 
-    public IsPerfectNumberTest(long fNumber, boolean fExpected) {
+    public IsPerfectNumberUtilTest(long fNumber, boolean fExpected) {
         this.fNumber = fNumber;
         this.fExpected = fExpected;
     }
@@ -29,6 +29,6 @@ public class IsPerfectNumberTest {
 
     @Test
     public void testIsPerfectNumber() {
-        assertEquals(fExpected, PerfectNumber.isPerfectNumber(fNumber));
+        assertEquals(fExpected, PerfectNumbers.isPerfectNumber(fNumber));
     }
 }
