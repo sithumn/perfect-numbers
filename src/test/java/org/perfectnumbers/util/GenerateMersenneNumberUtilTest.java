@@ -30,6 +30,6 @@ public class GenerateMersenneNumberUtilTest {
 
         @Test
         public void testGenerateMersenneNumber() {
-            assertEquals(fExpected, Util.generateMersenneNumber(fExponent));
+            assertEquals(fExpected, NumberUtil.generateMersenneNumber(fExponent));
         }
 }

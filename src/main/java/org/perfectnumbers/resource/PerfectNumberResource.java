@@ -13,7 +13,6 @@ public interface PerfectNumberResource {
     Response checkForPerfectPrime(@PathParam("number")Long number);
 
     @GET
-    @Path("")
     Response getPerfectNumbersList(@QueryParam("start")Long start, @QueryParam("end")Long end);
 
 }

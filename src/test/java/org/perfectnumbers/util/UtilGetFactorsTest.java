@@ -34,7 +34,7 @@ public class UtilGetFactorsTest {
 
     @Test
     public void testGetFactors() {
-        List<Long> actual =  Util.getFactors(fNumber);
+        List<Long> actual =  NumberUtil.getFactors(fNumber);
 
         assertEquals(fExpected, actual);
     }

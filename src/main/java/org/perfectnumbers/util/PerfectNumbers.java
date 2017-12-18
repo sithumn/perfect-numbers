@@ -17,7 +17,7 @@ public class PerfectNumbers {
     public static boolean isPerfectNumber(final long number) {
         if (number < 2) return false;
 
-        Util util = new Util();
+        NumberUtil util = new NumberUtil();
 
         if (number > 1) {
             List<Long> factors = util.getFactors(number);
@@ -48,10 +48,10 @@ public class PerfectNumbers {
 
         for(int i = 1;; i++) {
 
-            long mersennerNumber = Util.generateMersenneNumber(i);
+            long mersennerNumber = NumberUtil.generateMersenneNumber(i);
 
-            if (Util.isPrime(mersennerNumber)) {
-                long perfectNumber = Util.getPowerOfTwo(i - 1) * mersennerNumber;
+            if (NumberUtil.isPrime(mersennerNumber)) {
+                long perfectNumber = NumberUtil.getPowerOfTwo(i - 1) * mersennerNumber;
 
                 if (perfectNumber > start && perfectNumber < end) {
                     perfectNumbers.add(perfectNumber);

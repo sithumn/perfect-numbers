@@ -21,8 +21,9 @@ public class CheckPerfectNumberValidationFilter implements ContainerRequestFilte
     @Override
     public void filter(ContainerRequestContext requestContext) {
         MultivaluedMap<String, String> pathParameters = requestContext.getUriInfo().getPathParameters();
+        String path = requestContext.getUriInfo().getPath();
 
-        if (pathParameters.size() > 0) {
+        if (pathParameters.size() > 0 && !path.contains("health")) {
 
             String number = pathParameters.getFirst("number");
             String pattern = "[\\d]*";

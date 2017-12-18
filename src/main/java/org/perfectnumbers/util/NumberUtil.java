@@ -2,7 +2,7 @@ package org.perfectnumbers.util;
 
 import java.util.*;
 
-public class Util {
+public class NumberUtil {
 
     private static Map<String, Long> powerOfTwo = new HashMap<>();
 

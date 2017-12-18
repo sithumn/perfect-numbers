@@ -31,7 +31,7 @@ public class UtilIsPrimeTest {
 
     @Test
     public void testIsPrime() {
-        assertEquals(Util.isPrime(fNumber), fExpected);
+        assertEquals(NumberUtil.isPrime(fNumber), fExpected);
     }
 
 

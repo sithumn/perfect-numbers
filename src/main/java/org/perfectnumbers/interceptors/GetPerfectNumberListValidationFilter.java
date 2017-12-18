@@ -21,8 +21,9 @@ public class GetPerfectNumberListValidationFilter implements ContainerRequestFil
     @Override
     public void filter(ContainerRequestContext requestContext) {
         MultivaluedMap<String, String> queryParams = requestContext.getUriInfo().getQueryParameters();
+        String path = requestContext.getUriInfo().getPath();
 
-        if (queryParams.size() > 0) {
+        if (queryParams.size() > 0 && !path.contains("health")) {
 
             String start = queryParams.getFirst("start");
             String end = queryParams.getFirst("end");
