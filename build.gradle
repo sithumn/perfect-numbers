@@ -33,7 +33,7 @@ task copyJarsToLib (type: Copy) {
     into toDir
 }
 
-task fatJar(type: Jar) {
+task bundle(type: Jar) {
     manifest {
         attributes (
                 'Implementation-Title': 'Perfect Numbers',
@@ -45,4 +45,4 @@ task fatJar(type: Jar) {
     with jar
 }
 
-fatJar.dependsOn copyJarsToLib
+bundle.dependsOn copyJarsToLib
