@@ -108,7 +108,7 @@ To run the distribution unzip the distribution zip file, navigate to the bin dir
 ## Design & implementation
 * Service is designed & implemented carefully to improve the testability. Thus making it more maintainable, robust.
 * Design patterns are used where appropriate.
-    * Ex: Command pattern used in service implementation, Factory pattern is used to instantiote service classes(`src/main/java/org/perfectnumbers/service`)
+    * Ex: Factory pattern is used to instantiate service classes(`src/main/java/org/perfectnumbers/service`)
 * Health check URI is provided to check the health of the service
 * Code was written both security and performance in mind. Thus request parameter validtion and various gaurded code was implemented and some performance improvement techniques were used.
 
